@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Home</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+			<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+				<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+					<style>
+* 
+{
+box-sizing: border-box
+}
+
+.allslides 
+{
+display: none;
+color: black;
+}
+
+img
+{
+vertical-align: middle;
+}
+
+.containslide 
+{
+  width: 100%;
+  position: relative;
+  margin: auto;
+  color: black;
+}
+
+
+.prev, .next 
+{
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  margin-left: 0px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 10 10px 10px 10;
+}
+
+
+.next 
+{
+  right: 0;
+  border-radius: 10px 10 10 10px;
+}
+
+.prev 
+{
+left: 0;
+border-radius: 10px 10 10 10px;
+}
+
+
+.prev:hover, .next:hover 
+{
+  background-color: rgba(0,0,0,0.8);
+}
+
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+.num_text 
+{
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+
+.dot 
+{
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.green, .dot:hover 
+{
+  background-color: #717171;
+}
+
+.fade 
+{
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade 
+{
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade 
+{
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@media only screen and (max-width: 300px) 
+{
+  .prev, .next,.text {font-size: 11px}
+}
+.header 
+{
+  width:200%
+  overflow: hidden;
+  background-color: black;
+  text-align: center;
+ }
+
+.tab {
+    width: 100%;
+    background-color: #555;
+    overflow: auto;
+}
+
+.tab a {
+    float: left;
+    width: 20%;
+    text-align: center;
+    padding: 12px 0;
+    transition: all 0.5s ease;
+    color: white;
+    font-size: 36px;
+}
+
+.tab a:hover {
+    background-color: #4CAF50;
+}
+
+.green {
+    background-color: #4CAF50 !important;
+}
+
+.tlink 
+{
+    background-color: #555;
+    color: white;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    font-size: 17px;
+    width: 25%;
+}
+
+.tlink:hover 
+{
+    background-color: #777;
+}
+
+
+.tabcontent 
+{
+    color: white;
+    display: none;
+    padding: 50px;
+    text-align: center;
+	position: relative;
+    ;
+}
+
+.t-block 
+{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background: rgba(0, 0, 0, 0.5);
+    color: #f1f1f1;
+	font-style: italic;
+    padding-left: 20px;
+    padding-right: 20px;
+	transform: translate(-50%, -50%);
+}
+
+.fix
+{
+position: fixed;
+top:0;
+right:0;
+left:0;
+z-index:1;
+}
+
+.notfix
+{
+z-index: 0;
+margin-top:160px;
+}
+#Home 
+{
+background-color: red;
+}
+#News 
+{
+background-color: green;
+}
+#Contact 
+{
+background-color: blue;
+}
+#About 
+{
+background-color: orange;
+}
+#Dublin 
+{
+background-color:#d6d6c2;
+}
+#Paris 
+{
+background-color:#e6f7ff;
+}
+#Tokyo 
+{
+background-color:#ffcccc;
+}
+#London 
+{
+background-color:#3d3d29;
+}
+
+.container-b
+{
+padding:0.01em 100px;
+}
+
+.container-b:after,.container-b:before 
+{
+content:"";
+display:table;
+clear:both
+}
+
+body, html {
+    height: 100%;
+	font-family: "Lato", sans-serif;
+    
+}
+.padding-64
+{
+padding-top:200px;
+padding-bottom:100px;
+}
+
+.wcenter
+{
+text align: center;
+}
+
+.black
+{
+color:#fff;
+background-color:#000;
+}
+
+.xlarge
+{
+font-size:24px;
+}
+
+.medium
+{
+font-size:14px;
+}
+
+.tour 
+{
+background-color: grey;
+padding: 100px;
+}
+
+
+</style>
+				</head>
+				<body>
+					<div class = "fix">
+						<div class="header">
+							<a href="#default" class="logo"></a>
+							<img src="fitness_logo.jpg">
+							</div>
+							<div class="tab">
+								<a class="green" href="http://csserver.ucd.ie/~17202833/Fitness.html">
+									<i class="fa fa-home"></i>
+								</a>
+								<a href="http://csserver.ucd.ie/~17202833/Contactus.html">
+									<i class="fa fa-envelope"></i>
+								</a>
+								<a href="http://csserver.ucd.ie/~17202833/News.html">
+									<i class="fa fa-globe"></i>
+								</a>
+								<a href ="http://csserver.ucd.ie/~17202833/about.html">
+									<i class="fa fa-info-circle" style="font-size:36px"></i>
+								</a>
+								<a href  ="http://csserver.ucd.ie/~17202833/careers.html">
+									<i class="fa fa-suitcase" style="font-size:36px"></i>
+								</a>
+							</div>
+						</div>
+						<div class = "notfix">
+							<div class="containslide">
+								<div class="allslides fade">
+									<div class="num_text">1 / 3</div>
+									<img src="fit1.jpg" style="width:100%">
+										<div class="t-block">
+											<b>"THE BODY ACHIEVES WHAT THE MIND BELIEVES."</b>
+										</div>
+									</div>
+									<div class="allslides fade">
+										<div class="num_text">2 / 3</div>
+										<img src="yoga.jpg" style="width:100%">
+											<div class="t-block">
+												<b>"TAKE CARE OF YOUR BODY. IT'S THE ONLY PLACE YOU HAVE TO LIVE."</b>
+											</div>
+										</div>
+										<div class="allslides fade">
+											<div class="num_text">3 / 3</div>
+											<img src="fit.jpg" style="width:100%">
+												<div class="t-block">
+													<b>"HUSTLE FOR THAT MUSCLE."</b>
+												</div>
+											</div>
+											<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+											<a class="next" onclick="plusSlides(1)">&#10095;</a>
+										</div>
+										<div style="text-align:center">
+											<span class="dot" onclick="currentSlide(1)"></span>
+											<span class="dot" onclick="currentSlide(2)"></span>
+											<span class="dot" onclick="currentSlide(3)"></span>
+										</div>
+									</div>
+									<script>
+
+var s_index = 1;
+slideshow(s_index);
+
+function plusSlides(n) {
+  slideshow(s_index += n);
+}
+
+function currentSlide(n) {
+  slideshow(s_index = n);
+}
+
+function slideshow(n) {
+  var i;
+  var slides = document.getElementsByClassName("allslides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {s_index = 1}    
+  if (n < 1) {s_index = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" green", "");
+  }
+  slides[s_index-1].style.display = "block";  
+  dots[s_index-1].className += " green";
+}
+
+									
+									</script>
+									<br>
+										<br>
+											<div class = "tour">
+												<a href="http://csserver.ucd.ie/~17202833/tour.html">
+													<font size = "5vw" color = "White">
+														<center> Take a virtual tour with us!</center>
+													</font>
+												</a>
+											</div>
+											<br>
+												<br>
+													<div id="Dublin" class="tabcontent">
+														<h3>
+															<b>Our Offices:</b>
+														</h3>
+														<img src="Dublin.jpg" alt="Fitness" style="width:100%;">
+															<div class="t-block">
+																<font size = "10">Address: 1 Burlington Road,Dublin. We are open 7 days a week, 9am-5pm.</font>
+															</div>
+														</div>
+														<div id="Paris" class="tabcontent">
+															<h3>
+																<b>Our Offices:</b>
+															</h3>
+															<img src="Paris.jpg" alt="Fitness" style="width:100%;">
+																<div class="t-block">
+																	<font size = "30">Address: 10 Rue Nationale,Paris. We are open 7 days a week, 9am-5pm.</font>
+																</div>
+															</div>
+															<div id="Tokyo" class="tabcontent">
+																<h3>
+																	<b>Our Offices:</b>
+																</h3>
+																<img src="Tokyo.jpg" alt="Fitness" style="width:100%;">
+																	<div class="t-block">
+																		<font size = "30">Address: 2nd Floor,Shiodome City Centre,Tokyo. We are open 7 days a week, 9am-5pm.</font>
+																	</div>
+																</div>
+																<div id="London" class="tabcontent">
+																	<h3>
+																		<b>Our Offices:</b>
+																	</h3>
+																	<img src="London1.jpg" alt="Fitness" style="width:100%;">
+																		<div class="t-block">
+																			<font size = "30">Address: 38 Shannon street,London. We are open 7 days a week, 9am-5pm.</font>
+																		</div>
+																	</div>
+																	<button class="tlink" onclick="city('Dublin', this, '#d6d6c2')" id="defaultOpen">Dublin</button>
+																	<button class="tlink" onclick="city('Paris', this, '#e6f7ff')">Paris</button>
+																	<button class="tlink" onclick="city('Tokyo', this, '#ffcccc')">Tokyo</button>
+																	<button class="tlink" onclick="city('London', this, '#3d3d29')">London</button>
+																	<footer class="container-b padding-64 black xlarge">
+																		<a href="#">
+																			<i class="fa fa-facebook-official" style="font-size:36px"></i>
+																		</a>
+																		<a href="#">
+																			<i class="fa fa-pinterest-p" style="font-size:36px"></i>
+																		</a>
+																		<a href="#">
+																			<i class="fa fa-twitter" style="font-size:36px"></i>
+																		</a>
+																		<a href="#">
+																			<i class="fa fa-linkedin" style="font-size:36px"></i>
+																		</a>
+																		<font size = "4">Copyright 2017 Fitness Freaks. All rights reserved.</font>
+																	</footer>
+																	<script>
+function city(name,elmnt,color) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tlink");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].style.backgroundColor = "";
+    }
+    document.getElementById(name).style.display = "block";
+    elmnt.style.backgroundColor = color;
+
+}
+
+document.getElementById("defaultOpen").click();
+
+																	
+																	</script>
+																</body>
+															</html> 

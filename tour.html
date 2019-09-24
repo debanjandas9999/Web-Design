@@ -1,0 +1,185 @@
+<!DOCTYPE HTML>  
+<html>
+<title>Virtual Tour</title>
+<head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<style>
+.header 
+{
+  overflow: hidden;
+  background-color: black;
+  text-align: center;
+}
+.center 
+{
+	text-align: center;
+}
+.tab-bar 
+{
+    width: 100%;
+    background-color: #555;
+    overflow: auto;
+}
+.tab-bar a 
+{
+    padding: 12px 0;
+    transition: all 0.5s ease;
+    color: white;
+    font-size: 36px;
+    float: left;
+    width: 20%;
+    text-align: center;
+    
+}
+
+.tab-bar a:hover 
+{
+    background-color: #4CAF50;
+}
+
+.colour 
+{
+    background-color: #4CAF50;
+}
+
+.footer_container
+{
+padding:0.01em 100px;
+}
+
+.fix
+{
+position: fixed;
+top:0;
+right:0;
+left:0;
+z-index:1;
+}
+
+.notfix
+{
+z-index: 0;
+margin-top:170px;
+text-decoration:none;
+}
+
+.padding-64
+{
+padding-top:200px;
+padding-bottom:100px;
+}
+
+.black
+{
+color:#fff;
+background-color:#000;
+}
+
+.xl
+{
+font-size:24px;
+}
+
+.medium
+{
+font-size:14px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body 
+{
+    margin: 0;
+    font-family: Arial;
+    font-size: 17px;
+}
+
+#vid 
+{
+    min-width: 100%; 
+    min-height: 100%;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+   
+}
+
+.content 
+{
+    position: fixed;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    color: #f1f1f1;
+    width: 100%;
+    padding: 20px;
+}
+
+#buttonid 
+{
+    border: none;
+    background: #000;
+    color: #fff;
+    cursor: pointer;
+    width: 200px;
+    font-size: 18px;
+    padding: 10px;
+    
+}
+
+#buttonid:hover 
+{
+    background: #ddd;
+    color: black;
+}
+
+</style>
+
+<div class = "fix"> 
+<div class="header">
+  <a href="#default" class="logo"></a><img src="fitness_logo.jpg"> 
+  </div>
+  
+  <div class="tab-bar">
+  <a class="colour" href="http://csserver.ucd.ie/~17202833/Fitness.html"><i class="fa fa-home"></i></a> 
+  <a href="http://csserver.ucd.ie/~17202833/Contactus.html"><i class="fa fa-envelope"></i></a> 
+  <a href="http://csserver.ucd.ie/~17202833/News.html"><i class="fa fa-globe"></i></a>
+  <a href ="http://csserver.ucd.ie/~17202833/about.html"><i class="fa fa-info-circle" style="font-size:36px"></i></a>
+  <a href  ="http://csserver.ucd.ie/~17202833/careers.html"><i class="fa fa-suitcase" style="font-size:36px"></i></a>
+</div>
+</div>
+
+<div class = "notfix">
+
+<video loop id="vid"><source src="gymtour.mp4" type="video/mp4">Your browser does not support HTML5 video.</video>
+
+<div class="content">
+  <h1>Virtual Tour</h1>
+  <p>Raise your fitness level by joining us!</p>
+  <button id="buttonid" onclick="btnchange()">Play</button>
+</div>
+
+<script>
+
+var v = document.getElementById("vid");
+var b = document.getElementById("buttonid");
+
+function btnchange() 
+{
+  if (v.paused) 
+  {
+    v.play();
+    b.innerHTML = "Pause";
+  } else 
+  {
+    v.pause();
+    b.innerHTML = "Play";
+  }
+}
+</script>
+<br>
+</div>
+</body>
+</html>
